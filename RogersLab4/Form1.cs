@@ -91,7 +91,7 @@ namespace RogersLab4
             //varibles
             int People;
             bool validPeople;
-            int Price;
+            double Price;
             string Applied = "";
 
             //Location
@@ -121,7 +121,7 @@ namespace RogersLab4
             validPeople = int.TryParse(txtPeople.Text, out People);
 
             //if an integer is not entered...
-            if (validPeople == true)
+            if (validPeople != true)
             {
                 //display this message
                 DisplayMsg("People must be a whole number", "Input Error");
@@ -173,7 +173,7 @@ namespace RogersLab4
                                   "\nLocation: " + Location + "\n"
                                   + Applied + "\n"
                                   + "Price: " + Price.ToString("C");
-                lblPrice.Text = Price.ToString("C0");
+                lblPrice.Text = Price.ToString("C");
                 grpBook.Enabled = false;
 
 
